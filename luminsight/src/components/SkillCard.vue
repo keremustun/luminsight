@@ -1,8 +1,8 @@
 <script>
 export default {
   props: {
-    stars: {
-      default: 4
+    skill: {
+      required: true,
     }
   }
 }
@@ -10,16 +10,16 @@ export default {
 
 <template>
   <div class="card">
-    <div class="card-header">Add a skill</div>
     <div class="card-body">
-      <h5 class="card-title">C#</h5>
+      <h5 class="card-title">{{ skill.skillName }}</h5>
       <p class="card-text">
-        <i v-for="x in stars" class="bi bi-star-fill"></i>
-        <i v-for="x in 5 - (stars ?? 0)" class="bi bi-star"></i>
+        <i v-for="x in skill.stars" class="bi bi-star-fill"></i>
+        <i v-for="x in 5 - (skill.stars ?? 0)" class="bi bi-star"></i>
       </p>
-      <a href="#" class="btn btn-primary">Save</a>
+      <button  class="btn btn-primary">Edit</button>
     </div>
   </div>
+  
 </template>
 
 <style scoped></style>
