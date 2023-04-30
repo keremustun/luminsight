@@ -2,6 +2,18 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 
+<script>
+
+export default {
+  data() {
+    return {
+      loggedInPerson: {}
+    }
+  }
+  
+}
+</script>
+
 <template>
   <div class="container-fluid">
     <div class="row">
@@ -12,13 +24,8 @@ import { RouterLink, RouterView } from 'vue-router'
               <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">
-              <img
-                src="https://www.luminis.eu/wp-content/themes/luminis-2020/library/images/logo.svg"
-                alt="Logo"
-                width="80"
-                height="24"
-                class="d-inline-block align-text-top"
-              />
+              <img src="https://www.luminis.eu/wp-content/themes/luminis-2020/library/images/logo.svg" alt="Logo"
+                width="80" height="24" class="d-inline-block align-text-top" />
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
