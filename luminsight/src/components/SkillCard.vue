@@ -14,7 +14,7 @@ export default {
       <h5 class="card-title">{{ skill.skillName }}</h5>
       <p class="card-text">
         <i v-for="x in skill.stars" class="bi bi-star-fill"></i>
-        <i v-for="x in 5 - (skill.stars ?? 0)" class="bi bi-star"></i>
+        <i v-for="x in 5 - (skill.proficiency ?? 0)" class="bi bi-star"></i>
       </p>
       <button  class="btn btn-primary">Edit</button>
     </div>
